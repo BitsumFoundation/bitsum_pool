@@ -106,8 +106,12 @@
 
     <div class="col-md-4 stats marketRate">
         <h3 id="marketHeader">Market</h3>
-        <div class="marketFooter">Updated: <span id="marketLastUpdated"></span></div>
-        <div class="marketFooter">Powered by <a href="https://www.cryptonator.com/">Cryptonator</a></div>
+        <div><i class="fa fa-users"></i> Exchange: <span><a href="https://stocks.exchange/trade/SUM/BTC">stocks.exchange</a></span></div>
+        <div><i class="fa fa-money"></i> Price: <span id="stocksPrice"></span></div>
+        <div><i class="fa fa-clock-o"></i> Day volume: <span id="stocksValue"></span></div>
+
+        <!--<div class="marketFooter">Updated: <span id="marketLastUpdated"></span></div>-->
+<!--        <div class="marketFooter">Powered by <a href="https://www.cryptonator.com/">Cryptonator</a></div>-->
     </div>
 </div>
 
@@ -342,7 +346,7 @@
                     totalDonation += lastStats.config.donation[i];
                 }
                 totalFee += totalDonation;
-                updateText('poolDonations', floatToString(totalDonation) + '% to open-source devs');
+                updateText('poolDonations', floatToString(totalDonation) + '% to Bitsum developers');
             }
             else{
                 $('#donations').hide()
@@ -394,7 +398,7 @@
         for (var i = 0; i < cryptonatorWidget.length; i++){
             (function(i){
                 cryptonatorWidget[i] = cryptonatorWidget[i].replace('{symbol}', lastStats.config.symbol.toLowerCase());
-                xhrMarketGets[cryptonatorWidget[i]] = $.get('https://api.cryptonator.com/api/ticker/' + cryptonatorWidget[i], function(data){
+                xhrMarketGets[cryptonatorWidget[i]] = $.get('https://stocks.exchange/api2/ticker', function(data){
                     if(data.error) {
                         return;
                     }
@@ -406,15 +410,17 @@
 
                     var $marketHeader = $('#marketHeader');
                     $('.marketTicker').remove();
-                    for (var f = marketsData.length - 1; f >= 0 ; f--){
-                        var price = parseFloat(marketsData[f].ticker.price);
-
-                        if (price > 1) price = Math.round(price * 100) / 100;
-                        else price = marketsData[f].ticker.price;
-
-                        $marketHeader.after('<div class="marketTicker">' + marketsData[f].ticker.base + ': <span>' + price + ' ' + marketsData[f].ticker.target + '</span></div>');
-                    }
-                    $('#marketLastUpdated').timeago('update', new Date(marketsData[0].timestamp * 1000).toISOString());
+                        for(var h in data) {
+                            var name = data[h].market_name;
+                            if (name == 'SUM_BTC') {
+                                var price = parseFloat(data[h].last).toFixed(8);
+                                var value = parseFloat(data[h].vol).toFixed(0);
+                                updateText('stocksPrice', price + ' BTC');
+                                updateText('stocksValue', value + ' SUM');
+								//$('#marketLastUpdated').timeago('update', new Date(data[h].updated_time * 1000).toISOString());
+                                break;
+                            }
+                        }
                 }, 'json');
             })(i);
         }
