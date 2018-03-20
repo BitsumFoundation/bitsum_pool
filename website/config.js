@@ -19,7 +19,7 @@ var transactionExplorer = "?hash={id}#blockchain_transaction";
 var themeCss = "themes/default-theme.css";
 
 var networkStat = {
-    "sum": [
+    "bsm": [
         ["pool.bitsum.uz", "http://pool.bitsum.uz:8117"],
         ["sum.dreampool.info", "https://sum.dreampool.info/api/"],
 		["sum.multipool.online", "http://sum.multipool.online:8120"],
