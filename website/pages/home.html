@@ -106,7 +106,7 @@
 
     <div class="col-md-4 stats marketRate">
         <h3 id="marketHeader">Market</h3>
-        <div><i class="fa fa-users"></i> Exchange: <span><a href="https://stocks.exchange/trade/SUM/BTC">stocks.exchange</a></span></div>
+        <div><i class="fa fa-users"></i> Exchange: <span><a href="https://stocks.exchange/trade/BSM/BTC">stocks.exchange</a></span></div>
         <div><i class="fa fa-money"></i> Price: <span id="stocksPrice"></span></div>
         <div><i class="fa fa-clock-o"></i> Day volume: <span id="stocksValue"></span></div>
 
@@ -412,11 +412,11 @@
                     $('.marketTicker').remove();
                         for(var h in data) {
                             var name = data[h].market_name;
-                            if (name == 'SUM_BTC') {
+                            if (name == 'BSM_BTC') {
                                 var price = parseFloat(data[h].last).toFixed(8);
                                 var value = parseFloat(data[h].vol).toFixed(0);
                                 updateText('stocksPrice', price + ' BTC');
-                                updateText('stocksValue', value + ' SUM');
+                                updateText('stocksValue', value + ' BSM');
 								//$('#marketLastUpdated').timeago('update', new Date(data[h].updated_time * 1000).toISOString());
                                 break;
                             }

@@ -1,6 +1,6 @@
 {
     "coin": "Bitsum",
-    "symbol": "SUM",
+    "symbol": "BSM",
     "coinUnits": 10000000000,
     "coinDifficultyTarget": 120,
 
@@ -102,7 +102,7 @@
     "api": {
         "enabled": true,
         "hashrateWindow": 600,
-        "updateInterval": 20,
+        "updateInterval": 10,
         "port": 8117,
         "blocks": 30,
         "payments": 30,
