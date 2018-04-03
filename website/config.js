@@ -1,12 +1,12 @@
 var api = "http://pool.bitsum.uz:8080";
 
-var api_blockexplorer = "http://pool.bitsum.uz:18081";
+var api_blockexplorer = "http://seed1.bitsum.uz:28081";
 
 var poolHost = "pool.bitsum.uz";
 
 var irc = "";
 
-var email = "info@bitsum.uz";
+var email = "https://t.me/chegod";
 
 var cryptonatorWidget = ["{symbol}-BTC"];
 
@@ -21,10 +21,10 @@ var themeCss = "themes/default-theme.css";
 var networkStat = {
     "bsm": [
         ["pool.bitsum.uz", "http://pool.bitsum.uz:8080"],
-		["sum.eth.uz [TAS-IX]", "http://sum.eth.uz:8117"],
+        ["sum.eth.uz [TAS-IX]", "http://sum.eth.uz:8117"],
         ["sum.dreampool.info", "https://sum.dreampool.info/api/"],
-		["sum.multipool.online", "http://sum.multipool.online:8120"],
-		["sum.gonspool.com", "http://sum.gonspool.com:8118"],
-		["npool.pw/bitsum", "http://sum.npool.pw:10070"],
+        ["sum.multipool.online", "http://sum.multipool.online:8120"],
+        ["sum.gonspool.com", "http://sum.gonspool.com:8118"],
+        ["npool.pw/bitsum", "http://sum.npool.pw:10070"],
     ]
 };
