@@ -138,11 +138,13 @@
                     var accurateShares = shares;
                 }
                 if (difficulty > accurateShares){
-                    var percent = 100 - Math.round(accurateShares / difficulty * 100);
+                    //var percent = 100 - Math.round(accurateShares / difficulty * 100);
+                    var percent = Math.round(shares / difficulty * 100);
                     return '<span class="luckGood">' + percent + '%</span>';
                 }
                 else{
-                    var percent = (100 - Math.round(difficulty / accurateShares * 100)) * -1;
+                    //var percent = (100 - Math.round(difficulty / accurateShares * 100)) * -1;
+                    var percent = Math.round(shares / difficulty * 100);
                     return '<span class="luckBad">' + percent + '%</span>';
                 }
 	    }
