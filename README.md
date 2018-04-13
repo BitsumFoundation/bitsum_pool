@@ -38,7 +38,7 @@ sudo n 0.10
 Clone the repository and run `npm update` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/4egod/bitsum-pool.git pool
+git clone https://github.com/BitsumFoundation/bitsum_pool.git pool
 cd pool
 npm update
 ```
