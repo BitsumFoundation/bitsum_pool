@@ -1,5 +1,5 @@
 {
-    "coin": "Bitsum",
+    "coin": "bitsum",
     "symbol": "BSM",
     "coinUnits": 10000000000,
     "coinDifficultyTarget": 120,
@@ -36,23 +36,22 @@
             {
                 "port": 7777,
                 "difficulty": 100000,
-                "desc": "High end hardware",
-				"hidden": false
+                "desc": "High end hardware"
             },
             {
                 "port": 8888,
                 "difficulty": 400000,
                 "desc": "NiceHash",
-                "hidden": false
+                "hidden": true
             }
         ],
         "varDiff": {
             "minDiff": 100,
-            "maxDiff": 1000000,
+            "maxDiff": 500000,
             "targetTime": 100,
             "retargetTime": 30,
             "variancePercent": 30,
-            "maxJump": 1000
+            "maxJump": 100
         },
         "fixedDiff": {
             "enabled": true,
@@ -81,7 +80,7 @@
     "payments": {
         "enabled": true,
         "interval": 300,
-        "maxAddresses": 50,
+        "maxAddresses": 10,
         "mixin": 1,
         "transferFee": 10000000,
         "minPayment": 1000000000000,
@@ -116,7 +115,7 @@
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 18082
+        "port": 28082
     },
 
     "redis": {
@@ -131,7 +130,7 @@
         },
         "wallet": {
             "checkInterval": 60,
-            "rpcMethod": "getbalance"
+            "rpcMethod": "get_balance"
         }
     },
 

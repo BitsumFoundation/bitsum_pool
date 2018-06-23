@@ -1,11 +1,11 @@
 {
-    "name": "forknote-pool",
-    "version": "0.0.1",
+    "name": "bitsum_pool",
+    "version": "0.18.6",
     "license": "GPL-2.0",
     "authors": "Matthew Little",
     "repository": {
         "type": "git",
-        "url": "https://github.com/forknote/forknote-pool"
+        "url": "https://github.com/BitsumFoundation/bitsum_pool"
     },
     "dependencies": {
         "bignum": "*",
@@ -14,8 +14,8 @@
         "cli-color": "*",
         "dateformat": "*",
         "base58-native": "*",
-        "multi-hashing": "git://github.com/fancoder/node-multi-hashing.git",
-        "cryptonote-util": "git://github.com/forknote/node-cryptonote-util.git"
+        "multi-hashing": "git://github.com/BitsumFoundation/node_multi_hashing.git",
+        "cryptonote-util": "git://github.com/BitsumFoundation/node_cryptonote_util.git"
     },
     "engines": {
         "node": ">=0.10"
